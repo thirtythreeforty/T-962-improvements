@@ -23,6 +23,14 @@ static const profile am4300profile = {
 	}
 };
 
+static const profile mg4902pprofile = {
+	"MG 4902P LOW-TEMP LF", {
+		 25, 35, 45, 54, 63, 72, 81, 90, 99,107,115,121,127,133,139,145, // 0-150s
+		156,167,176,183,190,190,190,166,142,118, 94, 70,  0,  0,  0,  0, // Adjust peak from 180 to 190C
+		  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0  // 320-470s
+	}
+};
+
 // NC-31 low-temp lead-free profile
 static const profile nc31profile = {
 	"NC-31 LOW-TEMP LF", {
@@ -73,6 +81,7 @@ static const profile* profiles[] = {
 	&syntechlfprofile,
 	&nc31profile,
 	&am4300profile,
+	&mg4902pprofile,
 #ifdef RAMPTEST
 	&rampspeed_testprofile,
 #endif
